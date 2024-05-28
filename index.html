@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iris Flower Prediction</title>
+</head>
+<body>
+<h2>Iris Flower Prediction</h2>
+
+<label for="sepalLength">Sepal Length:</label>
+<input type="number" id="sepalLength" step="0.1" placeholder="Enter sepal length"><br><br>
+
+<label for="sepalWidth">Sepal Width:</label>
+<input type="number" id="sepalWidth" step="0.1" placeholder="Enter sepal width"><br><br>
+
+<label for="petalLength">Petal Length:</label>
+<input type="number" id="petalLength" step="0.1" placeholder="Enter petal length"><br><br>
+
+<label for="petalWidth">Petal Width:</label>
+<input type="number" id="petalWidth" step="0.1" placeholder="Enter petal width"><br><br>
+
+<button onclick="makePrediction()">Predict Iris Species</button><br><br>
+
+<p id="prediction"></p>
+
+<script>
+  async function makePrediction() {
+    const sepalLength = parseFloat(document.getElementById('sepalLength').value);
+    const sepalWidth = parseFloat(document.getElementById('sepalWidth').value);
+    const petalLength = parseFloat(document.getElementById('petalLength').value);
+    const petalWidth = parseFloat(document.getElementById('petalWidth').value);
+
+    // Display the prediction
+    document.getElementById('prediction').innerText = `Predicted Iris Species: ${data.prediction}`;
+  }
+</script>
+</body>
+</html>
